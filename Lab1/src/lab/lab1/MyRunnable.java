@@ -11,7 +11,6 @@ public class MyRunnable implements Runnable {
     public MyRunnable(int target, JSlider slider) {
         this.slider = slider;
         this.target = target;
-        exit = false;
     }
 
     @Override
