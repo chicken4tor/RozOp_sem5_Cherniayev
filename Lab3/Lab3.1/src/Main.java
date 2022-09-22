@@ -30,7 +30,7 @@ class CBee extends Thread {
         while (!interrupted()) {
             synchronized (Main.Pot) {
                 if (Main.Pot.CanAddSip()) {
-                    System.out.println("Бджола:  Додала Ковточок!");
+                    System.out.println("Бджола:  Додала ковточок!");
                     Main.Pot.AddSip();
                 }
                 else if (Main.Bear.IsSleeping()) {
@@ -51,7 +51,7 @@ class CBear extends Thread {
         while (!interrupted()) {
             if (!m_IsSleeping.get()) {
                 synchronized (Main.Pot) {
-                    System.out.println("Ведмідь: Я прокинувся і їм мед!");
+                    System.out.println("Ведмідь: Я прокинувся йду їсти мед!");
                     Main.Pot.EatAll();
                     m_IsSleeping.set(true);
                 }
